@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Azonix', sans-serif;
+    text-decoration: none;
+    text-transform: capitalize;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: url("background.jpg") no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: transparent;
+    padding: 20px 7%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 1000;
+    border: none;
+}
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    color: #d0d0d0;
+}
+header .logo:hover{
+    color: white;
+}
+header .navbar ul{
+    list-style: none;
+}
+header .navbar ul li{
+    position: relative;
+    float:left;
+}
+
+header .navbar ul li a{
+    font-size: 15px;
+    padding: 20px;
+    padding-bottom: 0px;
+    padding-top: 13px;
+    color: #d0d0d0;
+    display: block;
+}
+header .navbar ul li a:hover{
+    color: white;
+}
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 200px;
+    background: transparent;
+    display: none;
+}
+header .navbar ul li ul li{
+    width: 100%;
+    border-top: 1px solid rgba(0,0,0,.1);
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+#menu-bar
+{
+    display: none;
+}
+header label{
+    font-size: 15px;
+    color: #d0d0d0;
+    cursor: pointer;
+    display: none;
+}
+header label:hover{
+    color: white;
+}
+@media(max-width: 991px) {
+    header{
+        padding: 20px;
+    }
+    header label{
+        display: initial;
+    }
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        border-top: 1px solid rgba(0,0,0,.1);
+        background: transparent;
+        display: none;
+    }
+    header .navbar ul li {
+        width: 100%;
+    }
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+footer{
+    position: absolute;
+    display: flex;
+    height: 70px;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    font-family: 'Azonix', sans-serif;
+    color: #d0d0d0;
+    font-size: 13px;
+    align-items: center;
+}
+.fa{
+    padding: 12px;
+    font-size: 30px;
+    width: 40px;
+    text-align: center;
+    text-decoration: none;
+    border-radius: 50px;
+    border: solid;
+    transition: .9s;
+}
+.fa-facebook:hover{
+    color:black;
+    background-color: #09a9f3;
+    border-color: #09a9f3;
+
+}
+.fa-facebook{
+    color: #09a9f3;
+
+}
+.fa-github:hover{
+    color:black;
+    background-color: blueviolet;
+    border-color: blueviolet;
+
+}
+.fa-snapchat{
+    color:rgb(255, 252, 0);
+}
+.fa-snapchat:hover{
+    color:black;
+    background-color: rgb(255, 252, 0);
+    border-color: rgb(255, 252, 0);
+}
+.icon-contact{
+    margin-left: 30px;
+}
+p {
+    padding-left: 95px;
+}
+
+.content{
+    font-size: 60px;
+    font-weight: bolder;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 67px;
+    flex: 1;
+    margin-bottom: 70px;
+    color: transparent;
+    -webkit-text-stroke: 1px #fff;
+    background: url("back.png");
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back {
+    100%{
+        background-position: 2000px 0;
+    }
+
+}
